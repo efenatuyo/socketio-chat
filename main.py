@@ -24,6 +24,7 @@ class chatSystem:
     def message(message):
         
         for current in message['server']: 
+            if len(message['message']) >= 300: return
             if current in chatSystem().config['servers']: print(f"{message['username']}: {message['message']}"); return
     
     
